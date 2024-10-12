@@ -1,0 +1,242 @@
+/* Default light mode */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #f0f4f8, #e8f5e9);
+    color: #333;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    line-height: 1.6; /* Improved readability */
+}
+
+/* Dark mode */
+body.dark-mode {
+    background: #121212;
+    color: #ffffff;
+}
+
+header {
+    background-color: #00796b; /* Greenish color */
+    color: white;
+    padding: 30px; /* Increased padding */
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border-bottom: 5px solid #004d40;
+    transition: background-color 0.5s ease;
+}
+
+body.dark-mode header {
+    background-color: #004d40; /* Darker green for dark mode */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 30px; /* Increased margin */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #00897b; /* Lighten the hover color */
+}
+
+body.dark-mode nav ul li a:hover {
+    background-color: #00796b;
+}
+
+section {
+    padding: 50px; /* Increased padding */
+    margin: 30px 15%; /* Increased margin for better spacing */
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.5s ease;
+}
+
+body.dark-mode section {
+    background-color: #1e1e1e; /* Darker background for sections */
+}
+
+h2 {
+    color: #004d40; /* Dark green for section titles */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 3px solid #00796b;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 30px; /* Increased margin */
+    font-size: 28px; /* Larger font size for headings */
+}
+
+body.dark-mode h2 {
+    color: #66bb6a; /* Light green for dark mode headings */
+}
+
+p {
+    font-size: 20px; /* Larger font size for paragraphs */
+    color: #666;
+}
+
+body.dark-mode p {
+    color: #bbb;
+}
+
+.project {
+    margin: 30px 0; /* Increased margin */
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-left: 5px solid #00796b;
+    border-radius: 10px;
+}
+
+body.dark-mode .project {
+    background-color: rgba(50, 50, 50, 0.9);
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.image-gallery img {
+    width: 300px; /* Increased image size */
+    height: 300px; /* Increased image size */
+    margin: 15px;
+    border-radius: 20px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+    filter: brightness(80%);
+}
+
+body.dark-mode .image-gallery img {
+    filter: grayscale(80%);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.5s ease;
+}
+
+body.dark-mode footer {
+    background-color: #111;
+}
+
+footer p {
+    margin: 0;
+}
+
+a {
+    color: #00796b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Toggle button for dark mode */
+#dark-mode-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    padding: 5px 10px; /* Smaller padding */
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px; /* Smaller font size */
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
+#dark-mode-toggle:hover {
+    background-color: #00897b;
+}
+
+body.dark-mode #dark-mode-toggle {
+    background-color: #004d40;
+}
+
+/* Social links */
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    margin-right: 20px; /* Increased margin */
+    text-decoration: none;
+    color: #00796b;
+    font-weight: bold;
+    font-size: 18px; /* Increased font size */
+}
+
+.social-links a i {
+    margin-right: 5px;
+    font-size: 24px; /* Increased icon size */
+}
+
+.social-links a:hover {
+    color: #005b5c;
+}
+
+/* GitHub Logo */
+.github-logo {
+    width: 24px; /* Logo size */
+    height: 24px; /* Logo size */
+    vertical-align: middle; /* Center vertically */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+
+    section {
+        margin: 20px 5%;
+        padding: 40px;
+    }
+
+    h2 {
+        font-size: 24px; /* Adjusted for smaller screens */
+    }
+
+    p {
+        font-size: 18px; /* Adjusted for smaller screens */
+    }
+
+    .image-gallery img {
+        width: 100%; /* Responsive image size */
+        height: auto;
+    }
+
+    #dark-mode-toggle {
+        font-size: 12px; /* Adjusted button font size */
+    }
+}
